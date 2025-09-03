@@ -20,6 +20,6 @@ const clientes: [ string, number ][] = [
 console.log(clientes)
 
 for (let i: number = 0; i < clientes.length; i++) {
-    console.log("Nome: " + clientes[ i ][ 0 ])
-    console.log("Idade: " + clientes[ i ][ 1 ])
+    // console.log("Nome: " + clientes[ i ][ 0 ])
+    // console.log("Idade: " + clientes[ i ][ 1 ])
 }

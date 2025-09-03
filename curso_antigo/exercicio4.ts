@@ -5,7 +5,7 @@ const calcularMedia = (notas: number[]): number => {
     let media: number = 0
 
     for (let contador: number = 0; contador < notas.length; contador++) {
-        soma += notas[ contador ]
+        // soma += notas[ contador ]
     }
 
     media = soma / notas.length

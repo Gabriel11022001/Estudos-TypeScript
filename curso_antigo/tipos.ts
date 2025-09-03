@@ -44,7 +44,7 @@ console.log(numeros)
 let soma: number = 0
 
 for (let i: number = 0; i < numeros.length; i++) {
-    soma = soma + numeros[ i ]
+    // soma = soma + numeros[ i ]
 }
 
 console.log("Soma: " + soma)
