@@ -112,7 +112,7 @@ const cadastrarCliente = (clienteCadastrar: Cliente): void => {
 
 // editar cliente
 const editarCliente = (idClienteEditar: number, clienteEditar: Cliente): void => {
-
+  
 }
 
 // remover cliente da lista
