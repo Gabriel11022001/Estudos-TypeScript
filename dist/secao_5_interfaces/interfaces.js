@@ -145,4 +145,57 @@ operacao.operacao = "multiplicacao";
 console.log(realizarOperacao(operacao));
 operacao.operacao = "dividir";
 console.log(realizarOperacao(operacao));
+const notas = [];
+notas.push({
+    nota: 9.88
+});
+notas.push({
+    nota: 7.89
+});
+notas.push({
+    nota: 9.00
+});
+const aluno = {
+    id: 1,
+    nome: "Gabriel Rodrigues dos Santos",
+    notas: notas
+};
+const curso = {
+    id: 1,
+    alunos: [aluno],
+    nomeCurso: "Curso de TypeScript"
+};
+console.log(aluno);
+console.log(curso);
+function apresentarDadosCurso(curso) {
+    console.log("id do curso: " + curso.id);
+    console.log("nome do curso: " + curso.nomeCurso);
+    curso.alunos.forEach(function (aluno) {
+        console.log("id do aluno: " + aluno.id);
+        console.log("aluno: " + aluno.nome);
+        aluno.notas.forEach((nota) => {
+            console.log("nota: " + nota.nota.toFixed(2));
+        });
+    });
+}
+apresentarDadosCurso(curso);
+const pessoaFisica = {
+    id: 1,
+    nomeCompleto: "pessoa fisica 1",
+    cpf: "123.456.789-00",
+    dataNascimento: "11/02/2001",
+    email: "teste@teste.com",
+    telefone: "14998776655"
+};
+const pessoaJuridica = {
+    id: 2,
+    nomeCompleto: "pessoa juridica 1",
+    cnpj: "113.567.890/99",
+    dataFundacao: "11/02/2020",
+    email: "empresa@teste.com",
+    socios: ["Gabriel", "Pedro", "Jesse"],
+    telefone: "14998776799"
+};
+console.log(pessoaFisica);
+console.log(pessoaJuridica);
 //# sourceMappingURL=interfaces.js.map

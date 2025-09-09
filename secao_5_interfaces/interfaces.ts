@@ -253,3 +253,124 @@ console.log(realizarOperacao(operacao))
 operacao.operacao = "dividir"
 
 console.log(realizarOperacao(operacao))
+
+interface AlunoProps {
+
+  id: string | number;
+  nome: string;
+  notas: NotaAlunoProps[];
+
+}
+
+interface CursoProps {
+
+  id: string | number;
+  alunos: AlunoProps[]; // array na interface
+  alunos2?: Array<AlunoProps>; // array mas declarado de outra forma
+  nomeCurso: string;
+
+}
+
+interface NotaAlunoProps {
+
+  nota: number;
+
+}
+
+const notas: NotaAlunoProps[] = []
+
+notas.push({
+  nota: 9.88
+})
+
+notas.push({
+  nota: 7.89
+})
+
+notas.push({
+  nota: 9.00
+})
+
+const aluno: AlunoProps = {
+  id: 1,
+  nome: "Gabriel Rodrigues dos Santos",
+  notas: notas
+}
+
+const curso: CursoProps = {
+  id: 1,
+  alunos: [ aluno ],
+  nomeCurso: "Curso de TypeScript"
+}
+
+console.log(aluno)
+console.log(curso)
+
+function apresentarDadosCurso(curso: CursoProps): void {
+  console.log("id do curso: " + curso.id)
+  console.log("nome do curso: " + curso.nomeCurso)
+
+  curso.alunos.forEach(function (aluno: AlunoProps): void {
+    console.log("id do aluno: " + aluno.id)
+    console.log("aluno: " + aluno.nome)
+
+    aluno.notas.forEach((nota: NotaAlunoProps): void => {
+      console.log("nota: " + nota.nota.toFixed(2))
+    })
+
+  })
+
+}
+
+apresentarDadosCurso(curso)
+
+interface Pessoa {
+
+  id: number;
+  nomeCompleto: string;
+  telefone: string;
+  email: string;
+
+}
+
+// aplicando herança entre interfaces
+interface PessoaFisica extends Pessoa {
+
+  cpf: string;
+  dataNascimento: string;
+
+}
+
+interface PessoaJuridica extends Pessoa {
+
+  cnpj: string;
+  dataFundacao: string;
+  socios: string[];
+
+}
+
+const pessoaFisica: PessoaFisica = {
+  id: 1,
+  nomeCompleto: "pessoa fisica 1",
+  cpf: "123.456.789-00",
+  dataNascimento: "11/02/2001",
+  email: "teste@teste.com",
+  telefone: "14998776655"
+}
+
+const pessoaJuridica: PessoaJuridica = {
+  id: 2,
+  nomeCompleto: "pessoa juridica 1",
+  cnpj: "113.567.890/99",
+  dataFundacao: "11/02/2020",
+  email: "empresa@teste.com",
+  socios: [ "Gabriel", "Pedro", "Jesse" ],
+  telefone: "14998776799"
+}
+
+console.log(pessoaFisica)
+console.log(pessoaJuridica)
+
+pessoaJuridica.socios.forEach((socioNome: string): void => {
+  console.log(socioNome)
+})
