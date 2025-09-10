@@ -198,4 +198,7 @@ const pessoaJuridica = {
 };
 console.log(pessoaFisica);
 console.log(pessoaJuridica);
+pessoaJuridica.socios.forEach((socioNome) => {
+    console.log(socioNome);
+});
 //# sourceMappingURL=interfaces.js.map
