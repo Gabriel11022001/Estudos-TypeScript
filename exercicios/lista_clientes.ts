@@ -97,9 +97,9 @@ const cadastrarCliente = (clienteCadastrar: Cliente): void => {
   if (clientes.length == 0) {
     clienteCadastrar.idCliente = 1
   } else {
-    const ultimoCliente: Cliente | undefined = clientes.at(clientes.length - 1)
+    /*const ultimoCliente: Cliente | undefined = clientes.at(clientes.length - 1)
     
-    clienteCadastrar.idCliente = ultimoCliente == undefined ? 1 : (ultimoCliente.idCliente + 1)
+    clienteCadastrar.idCliente = ultimoCliente == undefined ? 1 : (ultimoCliente.idCliente + 1)*/
   }
   
   clientes.push(clienteCadastrar)
@@ -155,7 +155,7 @@ const apresentarClientes = (): void => {
   } else {
 
     for (let i: number = 0; i < clientes.length; i++) {
-      const cliente: Cliente | undefined = clientes.at(i)
+      /*const cliente: Cliente | undefined = clientes.at(i)
 
       if (cliente != undefined) {
         console.log("id: " + cliente.idCliente)
@@ -166,7 +166,7 @@ const apresentarClientes = (): void => {
         console.log("data de nascimento: " + cliente.dataNascimento)
         console.log("gênero: " + cliente.genero)
         console.log("email: " + cliente.email)
-      }
+      }*/
 
     }
 
@@ -176,7 +176,7 @@ const apresentarClientes = (): void => {
 
 // apresentar um cliente expecifico
 function apresentarCliente(idClienteApresentar: number): void {
-  const clienteApresentar: Cliente | undefined = clientes.find(c => c.idCliente == idClienteApresentar)
+  /*const clienteApresentar: Cliente | undefined = clientes.find(c => c.idCliente == idClienteApresentar)
 
   if (clienteApresentar) {
     console.log("id: " + clienteApresentar.idCliente)
@@ -189,7 +189,7 @@ function apresentarCliente(idClienteApresentar: number): void {
     console.log("gênero: " + clienteApresentar.genero)
   } else {
     console.log("Cliente não encontrado!")
-  }
+  }*/
 
 }
 

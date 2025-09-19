@@ -1,25 +1,23 @@
-"use strict";
 /**
  * é uma forma de tipar um conjunto de parâmetros
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 function apresentarDadosCliente(cliente) {
     console.log("Nome completo: " + cliente.nomeCompleto);
     console.log("Telefone: " + cliente.telefone);
     console.log("E-mail: " + cliente.email);
     console.log("Cpf: " + cliente.cpf);
 }
-const clienteApresentar = {
+var clienteApresentar = {
     nomeCompleto: "Gabriel Rodrigues dos Santos",
     telefone: "(14) 998776655",
     email: "teste@teste.com",
     cpf: "567.987.654-99"
 };
 apresentarDadosCliente(clienteApresentar);
-const gerarVariosClientes = (quantidadeClientes) => {
-    const clientes = [];
-    for (let contador = 0; contador < quantidadeClientes; contador++) {
-        const cliente = {
+var gerarVariosClientes = function (quantidadeClientes) {
+    var clientes = [];
+    for (var contador = 0; contador < quantidadeClientes; contador++) {
+        var cliente = {
             nomeCompleto: "Cliente " + (contador + 1),
             cpf: "123.456.788-99",
             telefone: "(14) 998776655",
@@ -29,10 +27,10 @@ const gerarVariosClientes = (quantidadeClientes) => {
     }
     return clientes;
 };
-gerarVariosClientes(100).forEach((clienteApresentar) => {
+gerarVariosClientes(100).forEach(function (clienteApresentar) {
     apresentarDadosCliente(clienteApresentar);
 });
-const produto = {
+var produto = {
     nomeProduto: "Produto 1",
     precoVenda: 12.99,
     estoque: 100,
@@ -42,8 +40,8 @@ const produto = {
     }
 };
 console.log(produto);
-const categoriaTeste = { nomeCategoria: "Categoria de teste 1" };
-const produtoTeste = { nomeProduto: "Produto de teste 2", precoVenda: 22.99, estoque: 200, status: false, categoria: categoriaTeste };
+var categoriaTeste = { nomeCategoria: "Categoria de teste 1" };
+var produtoTeste = { nomeProduto: "Produto de teste 2", precoVenda: 22.99, estoque: 200, status: false, categoria: categoriaTeste };
 console.log(produtoTeste);
 console.log("apresentar dados do produto......");
 console.log(produtoTeste.nomeProduto);
@@ -51,12 +49,12 @@ console.log(produtoTeste.precoVenda);
 console.log(produtoTeste.status);
 console.log(produtoTeste.estoque);
 console.log(produtoTeste.categoria.nomeCategoria);
-const primeiraNota = {
+var primeiraNota = {
     materia: "Matemática",
     nota: 9.77
 };
-const segundaNota = { materia: "História", nota: 10 };
-const aluno = {
+var segundaNota = { materia: "História", nota: 10 };
+var aluno = {
     nomeCompleto: "Gabriel Rodrigues dos Santos",
     email: "teste@teste.com",
     telefone: "(14) 998776655",
@@ -70,4 +68,5 @@ aluno.notas.forEach(function (notaAluno) {
     console.log("Matéria: " + notaAluno.materia);
     console.log("Nota: " + notaAluno.nota);
 });
+export {};
 //# sourceMappingURL=interfaces.js.map

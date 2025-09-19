@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var TamanhoCamisa;
 (function (TamanhoCamisa) {
     TamanhoCamisa["P"] = "P";
@@ -7,10 +5,11 @@ var TamanhoCamisa;
     TamanhoCamisa["G"] = "G";
     TamanhoCamisa["GG"] = "GG";
 })(TamanhoCamisa || (TamanhoCamisa = {}));
-const camisa = {
+var camisa = {
     modelo: "Camisa de teste",
     precoVenda: 12.99,
     tamanho: TamanhoCamisa.G
 };
 console.log(camisa);
+export {};
 //# sourceMappingURL=enum.js.map

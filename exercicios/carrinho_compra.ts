@@ -89,9 +89,9 @@ const adicionarProdutoCarrinho = (produto: Produto) => {
 
     for (let i: number = 0; i < carrinho.itens.length; i++) {
 
-      if (carrinho.itens.at(i)?.produto.produtoId == produto.produtoId) {
+      /*if (carrinho.itens.at(i)?.produto.produtoId == produto.produtoId) {
         produtoEstaCarrinho = true
-      }
+      }*/
 
     }
 

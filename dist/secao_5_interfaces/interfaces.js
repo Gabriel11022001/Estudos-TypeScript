@@ -1,21 +1,19 @@
-"use strict";
 /**
  * é uma estrutura de dados
  * que permite tipar as propriedades
  * de um objeto
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var Genero;
 (function (Genero) {
     Genero["Masculino"] = "Masculino";
     Genero["Feminino"] = "Feminino";
     Genero["Outro"] = "Outro";
 })(Genero || (Genero = {}));
-const primeiroContato = {
+var primeiroContato = {
     tipo: "telefone",
     contato: "(14) 998776655"
 };
-const segundoContato = {
+var segundoContato = {
     tipo: "email",
     contato: "teste@teste.com"
 };
@@ -24,7 +22,7 @@ const segundoContato = {
  * eu não preciso definir ela na hora
  * de declarar o objeto
  */
-const enderecoCliente = {
+var enderecoCliente = {
     cep: "17690-000",
     logradouro: "teste",
     bairro: "teste",
@@ -35,7 +33,7 @@ const enderecoCliente = {
 console.log(primeiroContato);
 console.log(segundoContato);
 console.log(enderecoCliente);
-const cliente = {
+var cliente = {
     nomeCompleto: "Gabriel Rodrigues dos Santos",
     genero: Genero.Masculino,
     dataNascimento: "11/02/2001",
@@ -48,10 +46,10 @@ const cliente = {
 console.log(cliente);
 // função recebendo um objeto de um tipo de uma interface como argumento
 function apresentarDadosCliente(clienteApresentar) {
-    console.log(`Nome completo: ${clienteApresentar.nomeCompleto}`);
-    console.log(`genero: ${clienteApresentar.genero}`);
-    console.log(`data de nascimento: ${clienteApresentar.dataNascimento}`);
-    clienteApresentar.contatos.forEach((contato) => {
+    console.log("Nome completo: ".concat(clienteApresentar.nomeCompleto));
+    console.log("genero: ".concat(clienteApresentar.genero));
+    console.log("data de nascimento: ".concat(clienteApresentar.dataNascimento));
+    clienteApresentar.contatos.forEach(function (contato) {
         console.log("tipo contato: " + contato.tipo);
         console.log("contato: " + contato.contato);
     });
@@ -61,23 +59,23 @@ function apresentarDadosCliente(clienteApresentar) {
 }
 apresentarDadosCliente(cliente);
 // desestruturação
-const { nomeCompleto, genero, dataNascimento, contatos, endereco } = cliente;
+var nomeCompleto = cliente.nomeCompleto, genero = cliente.genero, dataNascimento = cliente.dataNascimento, contatos = cliente.contatos, endereco = cliente.endereco;
 console.log(nomeCompleto);
 console.log(genero);
 console.log(dataNascimento);
 // obter somente os telefones
-const telefones = contatos.filter((contatoFiltrar) => {
+var telefones = contatos.filter(function (contatoFiltrar) {
     if (contatoFiltrar.tipo === "telefone") {
         return contatoFiltrar;
     }
 });
 console.log(telefones);
 console.log(endereco);
-const categoriaProduto = {
+var categoriaProduto = {
     nomeCategoria: "Categoria de teste 1",
     status: true
 };
-const produto = {
+var produto = {
     nome: "Produto de teste 1",
     precoCompra: 2.99,
     precoVenda: 22.99,
@@ -87,7 +85,7 @@ const produto = {
     status: false
 };
 // apresentar dados do produto
-const apresentarDadosProduto = (produto) => {
+var apresentarDadosProduto = function (produto) {
     console.log("Nome do produto: " + produto.nome);
     console.log("Descrição: " + produto.descricao);
     console.log("Estoque: " + produto.estoque);
@@ -106,19 +104,19 @@ const apresentarDadosProduto = (produto) => {
     }
 };
 apresentarDadosProduto(produto);
-const somar = (primeiroValor, segundoValor) => {
+var somar = function (primeiroValor, segundoValor) {
     return primeiroValor + segundoValor;
 };
-const subtrair = (primeiroValor, segundoValor) => {
+var subtrair = function (primeiroValor, segundoValor) {
     return primeiroValor - segundoValor;
 };
-const multiplicar = (primeiroValor, segundoValor) => {
+var multiplicar = function (primeiroValor, segundoValor) {
     return primeiroValor * segundoValor;
 };
-const dividir = (primeiroValor, segundoValor) => {
+var dividir = function (primeiroValor, segundoValor) {
     return primeiroValor / segundoValor;
 };
-const realizarOperacao = (operacao) => {
+var realizarOperacao = function (operacao) {
     if (operacao.operacao == "soma") {
         return somar(operacao.primeiroValor, operacao.segundoValor);
     }
@@ -133,7 +131,7 @@ const realizarOperacao = (operacao) => {
     }
     return 0;
 };
-const operacao = {
+var operacao = {
     primeiroValor: 11,
     segundoValor: 22,
     operacao: "soma"
@@ -145,7 +143,7 @@ operacao.operacao = "multiplicacao";
 console.log(realizarOperacao(operacao));
 operacao.operacao = "dividir";
 console.log(realizarOperacao(operacao));
-const notas = [];
+var notas = [];
 notas.push({
     nota: 9.88
 });
@@ -155,12 +153,12 @@ notas.push({
 notas.push({
     nota: 9.00
 });
-const aluno = {
+var aluno = {
     id: 1,
     nome: "Gabriel Rodrigues dos Santos",
     notas: notas
 };
-const curso = {
+var curso = {
     id: 1,
     alunos: [aluno],
     nomeCurso: "Curso de TypeScript"
@@ -173,13 +171,13 @@ function apresentarDadosCurso(curso) {
     curso.alunos.forEach(function (aluno) {
         console.log("id do aluno: " + aluno.id);
         console.log("aluno: " + aluno.nome);
-        aluno.notas.forEach((nota) => {
+        aluno.notas.forEach(function (nota) {
             console.log("nota: " + nota.nota.toFixed(2));
         });
     });
 }
 apresentarDadosCurso(curso);
-const pessoaFisica = {
+var pessoaFisica = {
     id: 1,
     nomeCompleto: "pessoa fisica 1",
     cpf: "123.456.789-00",
@@ -187,7 +185,7 @@ const pessoaFisica = {
     email: "teste@teste.com",
     telefone: "14998776655"
 };
-const pessoaJuridica = {
+var pessoaJuridica = {
     id: 2,
     nomeCompleto: "pessoa juridica 1",
     cnpj: "113.567.890/99",
@@ -198,7 +196,8 @@ const pessoaJuridica = {
 };
 console.log(pessoaFisica);
 console.log(pessoaJuridica);
-pessoaJuridica.socios.forEach((socioNome) => {
+pessoaJuridica.socios.forEach(function (socioNome) {
     console.log(socioNome);
 });
+export {};
 //# sourceMappingURL=interfaces.js.map

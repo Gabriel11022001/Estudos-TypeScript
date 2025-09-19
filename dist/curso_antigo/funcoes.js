@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // função padrão
 function apresentarDadosCliente(nomeCompleto, telefone, salario, possuiCnh) {
     console.log(nomeCompleto);
@@ -17,11 +15,11 @@ function gerarCliente(nomeCompleto, telefone, email, status) {
         status: status ? "Ativo" : "Inativo"
     };
 }
-const cliente = gerarCliente("Gabriel Rodrigues dos Santos", "14998787655", "gabriel@teste.com", true);
+var cliente = gerarCliente("Gabriel Rodrigues dos Santos", "14998787655", "gabriel@teste.com", true);
 console.log(cliente);
 // arrow functions
-const gerarClienteArrow = (nomeCompleto, telefone, email, status) => {
-    const cliente = {
+var gerarClienteArrow = function (nomeCompleto, telefone, email, status) {
+    var cliente = {
         nomeCompleto: nomeCompleto.toUpperCase(),
         telefone: telefone,
         email: email,
@@ -30,4 +28,5 @@ const gerarClienteArrow = (nomeCompleto, telefone, email, status) => {
     return cliente;
 };
 console.log(gerarClienteArrow("Gabriel Rodrigues dos Santos", "(14) 99878765", "gabrielteste@teste.com", false));
+export {};
 //# sourceMappingURL=funcoes.js.map

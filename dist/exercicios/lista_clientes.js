@@ -1,4 +1,3 @@
-"use strict";
 /**
  * criar uma lista de clientes e implementar
  * funções para realizar as seguintes operações:
@@ -9,7 +8,6 @@
  * 4 -> remover um cliente
  * 5 -> apresentar um cliente em expecifico
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var Genero;
 (function (Genero) {
     Genero["Masculino"] = "Masculino";
@@ -20,10 +18,10 @@ var TipoDocumento;
     TipoDocumento["cpf"] = "cpf";
     TipoDocumento["rg"] = "rg";
 })(TipoDocumento || (TipoDocumento = {}));
-let clientes = [];
-const validarExisteClienteCadastradoMesmoDocumento = (tipoDocumento, numeroDocumento) => {
-    let existe = false;
-    clientes.forEach((cliente) => {
+var clientes = [];
+var validarExisteClienteCadastradoMesmoDocumento = function (tipoDocumento, numeroDocumento) {
+    var existe = false;
+    clientes.forEach(function (cliente) {
         if (tipoDocumento == TipoDocumento.cpf) {
             // validar cpf
             if (cliente.cpf == numeroDocumento) {
@@ -39,7 +37,7 @@ const validarExisteClienteCadastradoMesmoDocumento = (tipoDocumento, numeroDocum
     return existe;
 };
 // cadastrar um cliente
-const cadastrarCliente = (clienteCadastrar) => {
+var cadastrarCliente = function (clienteCadastrar) {
     // validar duplicidade de cpf
     if (validarExisteClienteCadastradoMesmoDocumento(TipoDocumento.cpf, clienteCadastrar.cpf)) {
         console.log("Já existe outro cliente cadastrado com o mesmo cpf!");
@@ -51,7 +49,7 @@ const cadastrarCliente = (clienteCadastrar) => {
         return;
     }
     // validar duplicidade de e-mail
-    clientes.forEach((clienteValidarEmail) => {
+    clientes.forEach(function (clienteValidarEmail) {
         if (clienteCadastrar.email === clienteValidarEmail.email) {
             console.log("Já existe outro cliente cadastrado com o mesmo e-mail!");
             return;
@@ -62,8 +60,9 @@ const cadastrarCliente = (clienteCadastrar) => {
         clienteCadastrar.idCliente = 1;
     }
     else {
-        const ultimoCliente = clientes.at(clientes.length - 1);
-        clienteCadastrar.idCliente = ultimoCliente == undefined ? 1 : (ultimoCliente.idCliente + 1);
+        /*const ultimoCliente: Cliente | undefined = clientes.at(clientes.length - 1)
+        
+        clienteCadastrar.idCliente = ultimoCliente == undefined ? 1 : (ultimoCliente.idCliente + 1)*/
     }
     clientes.push(clienteCadastrar);
     console.log("Cliente cadastrado com sucesso.");
@@ -71,18 +70,19 @@ const cadastrarCliente = (clienteCadastrar) => {
     apresentarClientes();
 };
 // editar cliente
-const editarCliente = (idClienteEditar, clienteEditar) => {
+var editarCliente = function (idClienteEditar, clienteEditar) {
 };
 // remover cliente da lista
-const removerCliente = (id) => {
-    let contadorClientes = 0;
+var removerCliente = function (id) {
+    var _a;
+    var contadorClientes = 0;
     if (clientes.length == 0) {
         console.log("Não existem clientes cadastrados!");
         return;
     }
-    let indiceClienteRemover = null;
+    var indiceClienteRemover = null;
     while (contadorClientes < clientes.length) {
-        if (clientes[contadorClientes]?.idCliente == id) {
+        if (((_a = clientes[contadorClientes]) === null || _a === void 0 ? void 0 : _a.idCliente) == id) {
             indiceClienteRemover = contadorClientes;
         }
         contadorClientes++;
@@ -96,44 +96,45 @@ const removerCliente = (id) => {
     }
 };
 // apresentar todos os clientes
-const apresentarClientes = () => {
+var apresentarClientes = function () {
     if (clientes.length == 0) {
         console.log("Não existem clientes cadastrados.");
     }
     else {
-        for (let i = 0; i < clientes.length; i++) {
-            const cliente = clientes.at(i);
+        for (var i = 0; i < clientes.length; i++) {
+            /*const cliente: Cliente | undefined = clientes.at(i)
+      
             if (cliente != undefined) {
-                console.log("id: " + cliente.idCliente);
-                console.log("nome completo: " + cliente.nomeCompleto);
-                console.log("telefone: " + cliente.telefone);
-                console.log("cpf: " + cliente.cpf);
-                console.log("rg: " + cliente.rg);
-                console.log("data de nascimento: " + cliente.dataNascimento);
-                console.log("gênero: " + cliente.genero);
-                console.log("email: " + cliente.email);
-            }
+              console.log("id: " + cliente.idCliente)
+              console.log("nome completo: " + cliente.nomeCompleto)
+              console.log("telefone: " + cliente.telefone)
+              console.log("cpf: " + cliente.cpf)
+              console.log("rg: " + cliente.rg)
+              console.log("data de nascimento: " + cliente.dataNascimento)
+              console.log("gênero: " + cliente.genero)
+              console.log("email: " + cliente.email)
+            }*/
         }
     }
 };
 // apresentar um cliente expecifico
 function apresentarCliente(idClienteApresentar) {
-    const clienteApresentar = clientes.find(c => c.idCliente == idClienteApresentar);
+    /*const clienteApresentar: Cliente | undefined = clientes.find(c => c.idCliente == idClienteApresentar)
+  
     if (clienteApresentar) {
-        console.log("id: " + clienteApresentar.idCliente);
-        console.log("nome completo: " + clienteApresentar.nomeCompleto);
-        console.log("cpf: " + clienteApresentar.cpf);
-        console.log("rg: " + clienteApresentar.rg);
-        console.log("telefone: " + clienteApresentar.telefone);
-        console.log("email: " + clienteApresentar.email);
-        console.log("data de nascimento: " + clienteApresentar.dataNascimento);
-        console.log("gênero: " + clienteApresentar.genero);
-    }
-    else {
-        console.log("Cliente não encontrado!");
-    }
+      console.log("id: " + clienteApresentar.idCliente)
+      console.log("nome completo: " + clienteApresentar.nomeCompleto)
+      console.log("cpf: " + clienteApresentar.cpf)
+      console.log("rg: " + clienteApresentar.rg)
+      console.log("telefone: " + clienteApresentar.telefone)
+      console.log("email: " + clienteApresentar.email)
+      console.log("data de nascimento: " + clienteApresentar.dataNascimento)
+      console.log("gênero: " + clienteApresentar.genero)
+    } else {
+      console.log("Cliente não encontrado!")
+    }*/
 }
-const primeiroClienteCadastrar = {
+var primeiroClienteCadastrar = {
     nomeCompleto: "Gabriel Rodrigues dos Santos",
     cpf: "123.456.789-00",
     rg: "12.456.778/99",
@@ -144,7 +145,7 @@ const primeiroClienteCadastrar = {
     idCliente: 0
 };
 cadastrarCliente(primeiroClienteCadastrar);
-const segundoClienteCadastrar = {
+var segundoClienteCadastrar = {
     nomeCompleto: "Eduarda Pereira da Silva",
     cpf: "123.567.876-99",
     rg: "55.675.877/34",
@@ -159,4 +160,5 @@ apresentarCliente(1);
 apresentarCliente(1000);
 removerCliente(1);
 apresentarCliente(1);
+export {};
 //# sourceMappingURL=lista_clientes.js.map

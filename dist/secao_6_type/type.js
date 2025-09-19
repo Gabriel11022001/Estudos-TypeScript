@@ -1,10 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const numeroCpf = "123.456.789-99";
-const numeroCnh = "778.976.446-99";
+var numeroCpf = "123.456.789-99";
+var numeroCnh = "778.976.446-99";
 console.log(numeroCpf);
 console.log(numeroCnh);
-const pessoa = {
+var pessoa = {
     nome: "Gabriel Rodrigues dos Santos",
     cnh: "123.457.754-94",
     cpf: "123.456.789-78",
@@ -16,17 +14,17 @@ console.log("Nome: " + pessoa.nome);
 console.log("cnh: " + pessoa.cnh);
 console.log("cpf: " + pessoa.cpf);
 console.log("email: " + pessoa.email);
-pessoa.telefones.forEach((telefone) => {
+pessoa.telefones.forEach(function (telefone) {
     console.log("Telefone: " + telefone);
 });
-pessoa.telefones.forEach((telefone, indice) => {
+pessoa.telefones.forEach(function (telefone, indice) {
     console.log("telefone " + (indice + 1) + " : " + telefone);
 });
-const gerarContatos = (tipo) => {
-    const contatos = [];
+var gerarContatos = function (tipo) {
+    var contatos = [];
     if (tipo == "telefone") {
-        for (let i = 0; i < 10; i++) {
-            const telefone = {
+        for (var i = 0; i < 10; i++) {
+            var telefone = {
                 ativo: i % 2 == 0,
                 ddd: "55",
                 numero: "1499877652",
@@ -37,8 +35,8 @@ const gerarContatos = (tipo) => {
         }
     }
     else if (tipo == "email") {
-        for (let i = 0; i < 10; i++) {
-            const email = {
+        for (var i = 0; i < 10; i++) {
+            var email = {
                 ativo: i % 2 == 0,
                 email: "teste@teste.com",
                 tipoContato: "email"
@@ -48,10 +46,10 @@ const gerarContatos = (tipo) => {
     }
     return contatos;
 };
-const telefones = gerarContatos("telefone");
+var telefones = gerarContatos("telefone");
 console.log(telefones);
-const obterContatosAtivos = (contatos) => {
-    return contatos.filter((contato) => {
+var obterContatosAtivos = function (contatos) {
+    return contatos.filter(function (contato) {
         if (contato.ativo) {
             return contato;
         }
@@ -61,20 +59,20 @@ const obterContatosAtivos = (contatos) => {
 console.log("telefones ativos");
 console.log(obterContatosAtivos(telefones));
 // gerar categorias
-const gerarCategorias = () => {
-    const categorias = [];
-    for (let i = 0; i < 100; i++) {
+var gerarCategorias = function () {
+    var categorias = [];
+    for (var i = 0; i < 100; i++) {
         categorias.push({
             status: true,
-            nomeCategoria: `Categoria de teste ${i + 1}`
+            nomeCategoria: "Categoria de teste ".concat(i + 1)
         });
     }
     return categorias;
 };
 // gerar produtos
-const gerarProdutos = (categorias) => {
-    const produtos = [];
-    let i = 0;
+var gerarProdutos = function (categorias) {
+    var produtos = [];
+    var i = 0;
     while (i < 100) {
         produtos.push({
             categoria: i % 2 == 0 ? categorias[0] : categorias[1],
@@ -88,29 +86,29 @@ const gerarProdutos = (categorias) => {
     }
     return produtos;
 };
-const categorias = gerarCategorias();
-const produtos = gerarProdutos(categorias);
-const apresentarDadosProduto = (produtoApresentar) => {
+var categorias = gerarCategorias();
+var produtos = gerarProdutos(categorias);
+var apresentarDadosProduto = function (produtoApresentar) {
     if (produtoApresentar == undefined) {
         return;
     }
-    const { nome, categoria, precoVenda, precoCompra, descricao, estoque } = produtoApresentar;
-    console.log(`Produto: ${nome.toUpperCase()}`);
-    console.log(`Descrição do produto: ${descricao}`);
-    console.log(`Preço de venda: R$${precoVenda.toFixed(2)}`);
-    console.log(`Estoque: ${estoque} unidades`);
-    console.log(`Categoria: ${categoria?.nomeCategoria}`);
+    var nome = produtoApresentar.nome, categoria = produtoApresentar.categoria, precoVenda = produtoApresentar.precoVenda, precoCompra = produtoApresentar.precoCompra, descricao = produtoApresentar.descricao, estoque = produtoApresentar.estoque;
+    console.log("Produto: ".concat(nome.toUpperCase()));
+    console.log("Descri\u00E7\u00E3o do produto: ".concat(descricao));
+    console.log("Pre\u00E7o de venda: R$".concat(precoVenda.toFixed(2)));
+    console.log("Estoque: ".concat(estoque, " unidades"));
+    console.log("Categoria: ".concat(categoria === null || categoria === void 0 ? void 0 : categoria.nomeCategoria));
 };
 apresentarDadosProduto(produtos[0]);
 apresentarDadosProduto(produtos[1]);
 apresentarDadosProduto(produtos[2]);
 apresentarDadosProduto(produtos[3]);
-const infoCliente = {
+var infoCliente = {
     id: 1,
     nomeCompleto: "Gabriel Rodrigues dos Santos",
     telefone: "14998776655"
 };
-const clienteTeste = {
+var clienteTeste = {
     id: 1,
     nomeCompleto: "Gabriel",
     telefone: "1499M8787654",
@@ -119,4 +117,5 @@ const clienteTeste = {
 };
 console.log(infoCliente);
 console.log(clienteTeste);
+export {};
 //# sourceMappingURL=type.js.map

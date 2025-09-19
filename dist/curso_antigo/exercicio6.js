@@ -1,12 +1,10 @@
-"use strict";
 /**
  * criar lista de clientes para teste
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const gerarClientesTeste = () => {
-    const clientes = [];
-    for (let contador = 0; contador < 100; contador++) {
-        const cliente = {
+var gerarClientesTeste = function () {
+    var clientes = [];
+    for (var contador = 0; contador < 100; contador++) {
+        var cliente = {
             nomeCompleto: "Cliente de teste " + (contador + 1),
             telefone: "(14) 998775577",
             email: "teste" + (contador + 1) + "@teste.com",
@@ -25,4 +23,5 @@ const gerarClientesTeste = () => {
     }
     return clientes;
 };
+export {};
 //# sourceMappingURL=exercicio6.js.map

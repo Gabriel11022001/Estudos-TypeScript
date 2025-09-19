@@ -1,4 +1,3 @@
-"use strict";
 /**
  * em typescript o tipo é estático, ou seja, quando for
  * declarar uma variável, tenho que adicionar o tipo
@@ -8,22 +7,22 @@
  *
  * -> os arquivo typescript possuem a extenssão .ts
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-let nomeCompleto = "Gabriel Rodrigues dos Santos";
+var nomeCompleto = "Gabriel Rodrigues dos Santos";
 console.log(nomeCompleto);
-let peso = 87.88;
+var peso = 87.88;
 console.log(peso);
-let primeiroNumero = 22;
-let segundoNumero = 11;
-let soma = primeiroNumero + segundoNumero;
+var primeiroNumero = 22;
+var segundoNumero = 11;
+var soma = primeiroNumero + segundoNumero;
 console.log(soma);
 console.log("A soma entre " + primeiroNumero + " e " + segundoNumero + " é igual a " + soma);
 function somar(primeiroValor, segundoValor) {
     return primeiroValor + segundoValor;
 }
-let segundaSoma = somar(12, 22);
+var segundaSoma = somar(12, 22);
 console.log(segundaSoma);
-let genero = "Masculino";
+var genero = "Masculino";
+export {};
 /*
 genero = 12
 

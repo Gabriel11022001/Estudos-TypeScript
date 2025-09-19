@@ -1,1 +1,1 @@
-{"version":3,"file":"type.js","sourceRoot":"","sources":["../../curso_antigo/type.ts"],"names":[],"mappings":";AAAA;;GAEG;;AAIH,MAAM,gBAAgB,GAAgB,8BAA8B,CAAA;AAEpE,OAAO,CAAC,GAAG,CAAC,gBAAgB,CAAC,CAAA;AAE7B,MAAM,UAAU,GAAgB,IAAI,CAAA;AAEpC,OAAO,CAAC,GAAG,CAAC,UAAU,CAAC,CAAA"}
+{"version":3,"file":"type.js","sourceRoot":"","sources":["../../curso_antigo/type.ts"],"names":[],"mappings":"AAAA;;GAEG;AAIH,IAAM,gBAAgB,GAAgB,8BAA8B,CAAA;AAEpE,OAAO,CAAC,GAAG,CAAC,gBAAgB,CAAC,CAAA;AAE7B,IAAM,UAAU,GAAgB,IAAI,CAAA;AAEpC,OAAO,CAAC,GAAG,CAAC,UAAU,CAAC,CAAA"}

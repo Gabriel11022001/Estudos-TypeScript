@@ -1,4 +1,3 @@
-"use strict";
 /**
  * implementar um carrinho de compra com as opções de
  * -> adicionar produto no carrinho
@@ -9,10 +8,9 @@
  * -> limpar carrinho
  * -> finalizar pedido
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const gerarProdutos = () => {
-    const produtos = [];
-    for (let i = 0; i < 100; i++) {
+var gerarProdutos = function () {
+    var produtos = [];
+    for (var i = 0; i < 100; i++) {
         produtos.push({
             nome: "Produto: " + (i + 1),
             preco: 12.99 + i,
@@ -23,21 +21,22 @@ const gerarProdutos = () => {
     }
     return produtos;
 };
-const produtos = gerarProdutos();
-const carrinho = {
+var produtos = gerarProdutos();
+var carrinho = {
     carrinhoId: 1,
     dataVenda: "11/02/2001",
     valorTotal: 0,
     itens: []
 };
-const adicionarProdutoCarrinho = (produto) => {
+var adicionarProdutoCarrinho = function (produto) {
+    var _a;
     if (produto.unidadesEstoque < 1) {
         console.log("O produto " + produto.nome + " não possui unidades em estoque!");
         return;
     }
     // validar se o produto já existe no carrinho
     if (carrinho.itens.length == 0) {
-        const item = {
+        var item = {
             itemCarrinhoId: 1,
             produto: produto,
             precoProdutoMomentoCarrinho: produto.preco,
@@ -48,17 +47,17 @@ const adicionarProdutoCarrinho = (produto) => {
         console.log("Produto adicionado no carrinho!");
     }
     else {
-        let produtoEstaCarrinho = false;
-        for (let i = 0; i < carrinho.itens.length; i++) {
-            if (carrinho.itens.at(i)?.produto.produtoId == produto.produtoId) {
-                produtoEstaCarrinho = true;
-            }
+        var produtoEstaCarrinho = false;
+        for (var i = 0; i < carrinho.itens.length; i++) {
+            /*if (carrinho.itens.at(i)?.produto.produtoId == produto.produtoId) {
+              produtoEstaCarrinho = true
+            }*/
         }
         if (!produtoEstaCarrinho) {
             // produto não está no carrinho, adicionar
-            let idUltimoItemCarrinho = carrinho.itens[carrinho.itens.length - 1]?.itemCarrinhoId;
+            var idUltimoItemCarrinho = (_a = carrinho.itens[carrinho.itens.length - 1]) === null || _a === void 0 ? void 0 : _a.itemCarrinhoId;
             if (idUltimoItemCarrinho != undefined) {
-                const item = {
+                var item = {
                     itemCarrinhoId: idUltimoItemCarrinho + 1,
                     produto: produto,
                     precoProdutoMomentoCarrinho: produto.preco,
@@ -71,4 +70,5 @@ const adicionarProdutoCarrinho = (produto) => {
         }
     }
 };
+export {};
 //# sourceMappingURL=carrinho_compra.js.map

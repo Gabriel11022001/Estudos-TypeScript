@@ -1,10 +1,8 @@
-"use strict";
 /**
  * as propriedades readonly são properties que
  * o usuário pode visualizar mas não pode alterar o valor
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const produto = {
+var produto = {
     id: 1,
     nome: "Coca Cola",
     precoCompra: 11.22,
@@ -16,4 +14,5 @@ console.log("id do produto: " + produto.id);
 console.log("nome do produto: " + produto.nome);
 console.log("preço de compra do produto: " + produto.precoCompra.toFixed(2));
 console.log("preço de venda do produto: " + produto.precoVenda.toFixed(2));
+export {};
 //# sourceMappingURL=propriedades_readonly.js.map

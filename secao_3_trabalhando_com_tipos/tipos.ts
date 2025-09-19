@@ -142,14 +142,14 @@ nomes.pop(); // remover o ultimo elemento do array
 
 console.log(nomes);
 
-console.log(nomes.at(2)); // obter um elemento de um indice expecifico
+// console.log(nomes.at(2)); // obter um elemento de um indice expecifico
 
 // validar se um valor está no array
-if (nomes.includes("Gabriel")) {
+/*if (nomes.includes("Gabriel")) {
   console.log("Gabriel está no array!");
 } else {
   console.log("Gabriel não está no array!");
-}
+}*/
 
 interface Email {
 

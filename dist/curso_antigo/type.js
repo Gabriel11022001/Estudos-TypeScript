@@ -1,10 +1,9 @@
-"use strict";
 /**
  * type é uma forma de eu criar um alias(apelido) para um tipo determinado
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-const nomeClienteTeste = "Gabriel Rodrigues dos Santos";
+var nomeClienteTeste = "Gabriel Rodrigues dos Santos";
 console.log(nomeClienteTeste);
-const testeVazio = null;
+var testeVazio = null;
 console.log(testeVazio);
+export {};
 //# sourceMappingURL=type.js.map
